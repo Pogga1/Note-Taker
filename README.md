@@ -13,7 +13,7 @@
 * [Questions](#questions)
 # Installation
 ![Screenshot 2022-10-17 215243](https://user-images.githubusercontent.com/112588710/196338618-8c583684-e580-440e-93dd-3a2d4066969d.png)
-![Screenshot 2022-10-17 215309](https://user-images.githubusercontent.com/112588710/196338625-873dab16-3123-4716-bbf6-c1e5249b113d.png)
+![Screenshot 2022-10-18 141005](https://user-images.githubusercontent.com/112588710/196545596-5c3eb095-75db-41fc-81b0-149df1f4497a.png)
 
 The following necessary dependencies must be installed to run the application: 
 express.js
