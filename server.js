@@ -11,10 +11,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 //html routes
 app.get('/', (req, res) =>
-    res.sendFile(path.join(__dirname, '../public/index.html'))
+    res.sendFile(path.join(__dirname, '/develop/public/index.html'))
 );
 app.get('/notes', (req, res) =>
-    res.sendFile(path.join(__dirname, '../public/notes.html'))
+    res.sendFile(path.join(__dirname, '/develop/public/notes.html'))
 );
 //api routes
 app.get('/api/notes', (req, res) => {
@@ -39,7 +39,7 @@ const genNote = (body, notesArray) => {
     notesArray[0]++ ;
     notesArray.push(newNote);
 
-    fs.writeFileSync(path.join(__dirname, '../db/db.json'),
+    fs.writeFileSync(path.join(__dirname, '/develop/db/db.json'),
         JSON.stringify(notesArray, null, 2 )
     );
     return newNote;
@@ -50,7 +50,7 @@ for (let i = 0; i < notesArray.length; i++) {
     let note = notesArray[i];
     if (note.id == id) {
         notesArray.splice(i, 1);
-        fs.writeFileSync(path.join(__dirname, './db/db.json'),
+        fs.writeFileSync(path.join(__dirname, '/develop/db/db.json'),
             JSON.stringify(notesArray, null, 2)
         );
         break;
