@@ -9,19 +9,17 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
-//html routes
 app.get('/', (req, res) =>
     res.sendFile(path.join(__dirname, '/Develop/public/index.html'))
 );
 app.get('/notes', (req, res) =>
     res.sendFile(path.join(__dirname, '/Develop/public/notes.html'))
 );
-//api routes
 app.get('/api/notes', (req, res) => {
     res.json(dataBase.slice(1));
 });
 app.post('/api/notes', (req, res) => {
-    const newNote = createNote(req.body, dataBase);
+    const newNote = genNote(req.body, dataBase);
     res.json(newNote);
 });
 
